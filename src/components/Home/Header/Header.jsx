@@ -1,56 +1,3 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// const Header = () => {
-//   return (
-//     <>
-//     <Header>
-//     <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#e3f2fd"}}>
-
-//   <div className="container-fluid">
-//     <Link className="navbar-brand" to="#">Navbar</Link>
-//     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//       <span className="navbar-toggler-icon"></span>
-//     </button>
-//     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-//       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-//         <li className="nav-item">
-//           <Link className="nav-link active" aria-current="page" to="#">Home</Link>
-//         </li>
-//         <li className="nav-item">
-//           <Link className="nav-link" to="#">Link</Link>
-//         </li>
-//         <li className="nav-item dropdown">
-//           <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-//             Dropdown
-//           </Link>
-//           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-//             <li><Link className="dropdown-item" >Action</Link></li>
-//             <li><Link className="dropdown-item" to="">Another action</Link></li>
-//             <li><hr className="dropdown-divider" /></li>
-//             <li><Link className="dropdown-item" to="#">Something else here</Link></li>
-//           </ul>
-//         </li>
-//         <li className="nav-item">
-//           <Link className="nav-link disabled" to="#" tabindex="-1" aria-disabled="true">Disabled</Link>
-//         </li>
-//       </ul>
-//       <form className="d-flex">
-//         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-//         <button className="btn btn-outline-success" type="submit">Search</button>
-//       </form>
-//     </div>
-//   </div>
-// </nav>
-
-//     </Header>
-//     </>
-//   )
-// }
-
-// export default Header
-
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -65,8 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import mainLogo from '../../../assets/images/HomePage/main_logo.JPG';
+import Logo from '../../../assets/images/HomePage/1.JPG'
 
-const pages = ['Products', 'Pricing', 'Blog','About Us'];
+const pages = ['Info', 'Contact Us','About Us','Login'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header() {
@@ -92,23 +41,26 @@ function Header() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+          <img width={"50px"} style={{borderRadius:"50%"}} src={mainLogo} alt="Abhinav" />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
+              marginLeft:'10px'
             }}
           >
-            LOGO
+            Abhinav
+            {/* <img src={mainLogo} alt="Abhinav" /> */}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -168,7 +120,7 @@ function Header() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+              <Button style={{textTransform:"capitalize"}}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -181,7 +133,7 @@ function Header() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Abhinav" src={Logo} />
               </IconButton>
             </Tooltip>
             <Menu
