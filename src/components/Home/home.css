@@ -1,0 +1,18 @@
+.mainDiveHome{
+     display: flex;
+     justify-content: space-evenly;
+     flex-direction: row;
+     align-items: center;
+     width: 90%;
+     margin-top:50px !important;
+     margin: auto;
+     background-color: #f6f9ff;
+    padding: 78px 0px;
+    border-radius: 20px;
+}
+.mainDiveHomeLeft{
+     width: 45%;
+}
+.mainDivHomeRight{
+  width: 45%;
+}

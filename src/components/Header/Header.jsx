@@ -12,11 +12,11 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import mainLogo from '../../../assets/images/HomePage/main_logo.JPG';
-import Logo from '../../../assets/images/HomePage/1.JPG'
+import mainLogo from '../../assets/images/HomePage/main_logo.JPG';
+import Logo from '../../assets/images/HomePage/1.JPG'
 
-const pages = ['Info', 'Contact Us','About Us','Login'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Project', 'Contact Us','About Us','Login'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Education'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

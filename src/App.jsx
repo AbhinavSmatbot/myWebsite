@@ -1,9 +1,12 @@
 
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+// import 'tailwindcss/base';
+// import 'tailwindcss/components';
+// import 'tailwindcss/utilities';
 import Home from './components/Home/Home';
-import Header from './components/Home/Header/Header';
-import Footer from './components/Home/Footer/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
