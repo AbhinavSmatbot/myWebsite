@@ -16,8 +16,8 @@ function Home() {
                  <p>I am a developer</p>
                </div>
                <div>
-               <button type="button" class="btn btn-primary">Download CV</button>
-               <a href="/"><button type="button" class="btn btn-primary m-2">Email Us</button></a>
+               <button type="button" className="btn btn-primary">Download CV</button>
+               <a href="/"><button type="button" className="btn btn-primary m-2">Email Us</button></a>
                </div>
 
           </div>

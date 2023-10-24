@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { Link } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
+
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -104,7 +106,7 @@ function Header() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -120,13 +122,16 @@ function Header() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button style={{textTransform:"capitalize"}}
+              <Link to={page}>
+                <Button style={{textTransform:"capitalize"}}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
+              </Link>
+              
             ))}
           </Box>
 
@@ -159,7 +164,10 @@ function Header() {
               ))}
             </Menu>
           </Box>
+          {/* <Outlet /> */}
         </Toolbar>
+        
+
       </Container>
     </AppBar>
   );
