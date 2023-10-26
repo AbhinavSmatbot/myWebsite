@@ -1,0 +1,70 @@
+.mainDivContact{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     width: 90%;
+     margin: auto;
+     margin-top: 50px !important;
+     border: 1px solid #f9f6ff;
+    padding: 0px 0px 10px 0px;
+    background-color: #f6f9ff;
+    border-radius: 6px;
+    box-shadow: 0px 5px 15px #465DEF29;
+}
+.full-widtheee{
+     width: 90%;
+}
+.mainDivContactLeft{
+     display:flex;
+     flex-direction: row;
+     align-items: center;
+     width: 50%;
+     padding: 20px;
+}
+.mainDivContactRight{
+     display:flex;
+     flex-direction: row;
+     align-items: center;
+     width: 50%;
+     padding: 20px;
+}
+.allInput{
+     text-align: left;
+     padding: 12px 20px;
+     border-radius: 4px;
+     border: 2px solid #E1E4F8;
+     font-size: 12px;
+     font-family: "Montserrat", sans-serif;
+     width: 100%;
+     letter-spacing: 0px;
+     color: #7272AB;
+     background: #fff;
+     display: inline-block;
+}
+.textArea{
+     resize: none;
+}
+@media (max-width: 768px) {
+     .mainDivContact{
+          display: flex;
+          flex-direction:column;
+          width: 100%;
+          padding: 10px;
+     }
+     .mainDivContactLeft{
+          width: 100%;
+          padding: 10px;
+     }
+     .mainDivContactRight{
+          width: 100%;
+          padding: 10px;
+     }
+     .full-widthwww{
+          width: 100% !important;
+     }
+     .full-widtheee{
+          width:100%;
+     }
+
+}

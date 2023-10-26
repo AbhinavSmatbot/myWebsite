@@ -4,15 +4,36 @@
      flex-direction: row;
      align-items: center;
      width: 90%;
-     margin-top:50px !important;
-     margin: auto;
+     margin: 50px 10% 0px 10%;
      background-color: #f6f9ff;
-    padding: 78px 0px;
+    padding: 55px 0px;
     border-radius: 20px;
+    box-shadow: 0px 5px 15px #465DEF29;
 }
 .mainDiveHomeLeft{
      width: 45%;
 }
 .mainDivHomeRight{
   width: 45%;
+}
+@media (max-width: 768px) {
+     .mainDiveHome{
+          display: flex;
+          justify-content: space-evenly;
+          flex-direction:column;
+          width: 100%;
+          padding: 10px;
+          margin: 20px 1% 0px 1%;
+     }
+     .mainDiveHomeLeft{
+          width: 100%;
+     }
+     .mainDivHomeRight{
+       width:100%;
+     }
+     .all-center{
+          text-align: center;
+     }
+
+
 }

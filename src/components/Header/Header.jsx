@@ -13,11 +13,37 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+// import AdbIcon from '@mui/icons-material/Adb';
 import mainLogo from '../../assets/images/HomePage/main_logo.JPG';
 import Logo from '../../assets/images/HomePage/1.JPG'
 
-const pages = ['Project', 'Contact Us','About Us','Login'];
+const pages = [
+  {
+    id:1,
+    page:'Project',
+    url:"project"
+  },
+  {
+    id:2,
+    page:'Contact Us',
+    url:"contact-us"
+  },
+  {
+    id:3,
+    page:'About Us',
+    url:"about"
+  },
+  {
+    id:4,
+    page:'Skills',
+    url:"skill"
+  },
+  {
+    id:5,
+    page:'Login',
+    url:"login"
+  }
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Education'];
 
 function Header() {
@@ -41,15 +67,14 @@ function Header() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className='mono'>
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-          <img width={"50px"} style={{borderRadius:"50%"}} src={mainLogo} alt="Abhinav" />
+         <Link sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} to='/' style={{textDecoration:"none"}}><img width={"45px"} style={{borderRadius:"50%"}} src={mainLogo} alt="Abhinav" /></Link> 
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -61,7 +86,8 @@ function Header() {
               marginLeft:'10px'
             }}
           >
-            Abhinav
+            
+            <Link to='/'>Abhinav</Link>
             {/* <img src={mainLogo} alt="Abhinav" /> */}
           </Typography>
 
@@ -95,18 +121,19 @@ function Header() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                 <Link to={page.url} style={{textDecoration:"none"}}><Typography textAlign="center">{page.page}</Typography></Link> 
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+          {/* <Link sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} to='/'><img sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} width={"40px"} style={{borderRadius:"50%"}} src={mainLogo} alt="Abhinav" /></Link>  */}
+          <Link to='/'>
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -118,17 +145,19 @@ function Header() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Abhinav
           </Typography>
+          </Link>
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link to={page}>
+              <Link key={page.id}  to={page.url} style={{textDecoration:"none"}}>
                 <Button style={{textTransform:"capitalize"}}
-                key={page}
+                
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.page}
               </Button>
               </Link>
               
