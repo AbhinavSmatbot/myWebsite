@@ -4,13 +4,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import 'tailwindcss/base';
-// import 'tailwindcss/components';
-// import 'tailwindcss/utilities';
+
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 import Contact from './pages/Contact/Contact';
+import Project  from './pages/Project/Project';
+import Skill from './pages/Skill/Skill';
+import Login from './pages/Login/Login';
+import Registration from './pages/Registration/Registration';
 
 const App = () => {
   return (
@@ -23,10 +25,14 @@ const App = () => {
         <Route>
           <Route path="/" element={<Home />} />
           <Route path="contact-us" element={<Contact />} />
+          <Route path='project' element={<Project/>} />
+          <Route path='skill' element={<Skill/>} />
+          <Route path="login" element={<Login/>}/>
+          <Route path="registration" element={<Registration/>}/>
           {/* <Route path="About_Us" element={<NoPage />} /> */}
         </Route>
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </BrowserRouter>
 
   </>

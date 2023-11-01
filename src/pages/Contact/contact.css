@@ -5,7 +5,7 @@
      align-items: center;
      width: 90%;
      margin: auto;
-     margin-top: 50px !important;
+     margin-top:130px !important;
      border: 1px solid #f9f6ff;
     padding: 0px 0px 10px 0px;
     background-color: #f6f9ff;
@@ -49,7 +49,7 @@
      .mainDivContact{
           display: flex;
           flex-direction:column;
-          width: 100%;
+          width:90%;
           padding: 10px;
      }
      .mainDivContactLeft{

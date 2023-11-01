@@ -1,7 +1,17 @@
 import React, { useRef } from 'react';
 import './contact.css';
 import { toast } from 'react-toastify';
-import contactaiamge from '../../../src/assets/images/partner/n3-01.svg'
+import contactaiamge from '../../../src/assets/images/partner/n3-01.svg';
+const toaaobject = {
+     position: "top-center",
+   autoClose: 4000,
+   hideProgressBar: false,
+   closeOnClick: true,
+   pauseOnHover: true,
+   draggable: false,
+   progress: undefined,
+   theme: "colored",
+}
 
 const Contact = () => {
      const nameInput = useRef();
@@ -15,21 +25,19 @@ const Contact = () => {
           if (inputTest?.length > 0) {
                if (emailTest?.length > 0) {
                     if (phoneTest?.length > 0) {
-                         toast('Thanks for your response. I will be getting in touch with you');
+                         toast.success('Thanks for your response. I will be getting in touch with you');
                          nameInput.current.value = '';
                          emailInput.current.value = '';
                          phoneInput.current.value = '';
                     } else {
-                         toast("Name is required");
+                         toast.error("Name is required",toaaobject);
                     }
                } else {
-                    toast("Name is required");
+                    toast.error("Name is required",toaaobject);
                }
           } else {
-            toast("Name is required");
+               toast.error("Name is required",toaaobject);
           }
-
-
      }
      return (
           <>

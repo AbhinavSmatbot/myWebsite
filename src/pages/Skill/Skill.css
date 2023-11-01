@@ -1,0 +1,62 @@
+.skill-header{
+     /* color:; */
+     text-align: left;
+     font-size: 20px;
+     margin-bottom: 20px;
+     font-weight: 600;
+}
+.skill-header-main{
+     font-family: 'Montserrat';
+     
+     /* align-items: center; */
+     width: 90%;
+     margin:35px 5% 18px 5%;
+     
+    padding:30px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px #465DEF29;
+}
+.content-div{
+     display: flex;
+     justify-content:flex-start;
+     flex-direction: row;
+}
+.cont-div-skill{
+     border: 1px solid rebeccapurple;
+     background-color: #f6f9ff;
+     padding: 10px;
+     border-radius:6px;
+     margin-right: 10px;
+     min-height: 252px;
+
+
+}
+.main-box-div{
+     width: 30%;
+}
+.cont-div-skill:hover{
+     box-shadow: 0px 1px 25px 2px #8990fb8c;
+    transform: scale(1.1);
+    transition: transform .5s cubic-bezier(.2,3,.4,1) 0s;
+}
+@media (max-width: 768px) {
+     .skill-header-main{
+          font-family: 'Montserrat';
+          
+          /* align-items: center; */
+          width: 90%;
+          margin:35px 5% 60px 5%;
+          
+         padding:30px 30px;
+         border-radius: 20px;
+         box-shadow: 0px 5px 15px #465DEF29;
+     }
+     .content-div{
+          display: flex;
+          justify-content:center;
+          flex-direction:column;
+     }
+     .main-box-div{
+          width:100%;
+     }  
+}

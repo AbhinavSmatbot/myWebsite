@@ -4,7 +4,7 @@
      flex-direction: row;
      align-items: center;
      width: 90%;
-     margin: 50px 10% 0px 10%;
+     margin: 50px 5% 0px 5%;
      background-color: #f6f9ff;
     padding: 55px 0px;
     border-radius: 20px;
@@ -16,14 +16,33 @@
 .mainDivHomeRight{
   width: 45%;
 }
+.socialMedis{
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+}
+.socialMedisIcon{
+     padding:6px;
+    background: #FFFFFF;
+    box-shadow: 2px 3px 6px #465DEF24;
+    border-radius: 8px;
+    margin: 5px;
+    
+    
+}
+.socialMedisIcon:hover{
+     box-shadow: 0px 1px 25px 2px #8990fb8c;
+    transform: scale(1.1);
+    transition: transform .5s cubic-bezier(.2,3,.4,1) 0s;
+}
 @media (max-width: 768px) {
      .mainDiveHome{
           display: flex;
           justify-content: space-evenly;
           flex-direction:column;
-          width: 100%;
+          width:90%;
           padding: 10px;
-          margin: 20px 1% 0px 1%;
+          margin: 20px 5% 0px 5%;
      }
      .mainDiveHomeLeft{
           width: 100%;
@@ -33,6 +52,12 @@
      }
      .all-center{
           text-align: center;
+     }
+     .socialMedis{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-bottom: 20px;
      }
 
 

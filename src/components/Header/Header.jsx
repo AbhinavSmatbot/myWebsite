@@ -14,8 +14,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
+
 import mainLogo from '../../assets/images/HomePage/main_logo.JPG';
-import Logo from '../../assets/images/HomePage/1.JPG'
+// import Logo from '../../assets/images/HomePage/1.JPG'
 
 const pages = [
   {
@@ -25,8 +26,8 @@ const pages = [
   },
   {
     id:2,
-    page:'Contact Us',
-    url:"contact-us"
+    page:'Skills',
+    url:"skill"
   },
   {
     id:3,
@@ -35,9 +36,10 @@ const pages = [
   },
   {
     id:4,
-    page:'Skills',
-    url:"skill"
+    page:'Contact Us',
+    url:"contact-us"
   },
+  
   {
     id:5,
     page:'Login',
@@ -66,8 +68,8 @@ function Header() {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl" className='mono'>
+    <AppBar position="fixed">
+      <Container maxWidth="xl" className='mono' style={{fontFamily:'Montserrat'}}>
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
          <Link sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} to='/' style={{textDecoration:"none"}}><img width={"45px"} style={{borderRadius:"50%"}} src={mainLogo} alt="Abhinav" /></Link> 
@@ -87,7 +89,7 @@ function Header() {
             }}
           >
             
-            <Link to='/'>Abhinav</Link>
+            <Link to='/' style={{color:"white",textDecoration:"none"}}>Abhinav</Link>
             {/* <img src={mainLogo} alt="Abhinav" /> */}
           </Typography>
 
@@ -129,7 +131,7 @@ function Header() {
           </Box>
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           {/* <Link sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} to='/'><img sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} width={"40px"} style={{borderRadius:"50%"}} src={mainLogo} alt="Abhinav" /></Link>  */}
-          <Link to='/'>
+          <Link to='/' style={{color:'white', textDecoration:'none'}}>
           <Typography
             variant="h5"
             noWrap
@@ -167,7 +169,8 @@ function Header() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Abhinav" src={Logo} />
+                <Avatar alt="Abhinav" src='' />
+                {/* A */}
               </IconButton>
             </Tooltip>
             <Menu
