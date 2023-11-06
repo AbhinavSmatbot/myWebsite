@@ -12,7 +12,9 @@ import {AiFillLinkedin} from 'react-icons/ai';
 import {BsFacebook} from 'react-icons/bs';
 
 import Skill from '../../pages/Skill/Skill';
-import Contact from '../../pages/Contact/Contact'
+import Contact from '../../pages/Contact/Contact';
+import Project from '../../pages/Project/Project';
+
 
 function Home() {
   return (
@@ -46,6 +48,7 @@ function Home() {
           </div>
        </div>
     </div>
+    <Project/>
     <Skill/>
     <div className='full-width'>
     <Contact/>

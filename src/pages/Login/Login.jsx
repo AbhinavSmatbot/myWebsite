@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState,createContext} from 'react'
 // import Registration from '../..pages/Registration/registration';
 import { toast } from 'react-toastify';
 import {Link} from 'react-router-dom';
@@ -8,9 +8,10 @@ import profile from "../../assets/images/Login/icon.jpg";
 import { IoMdSend } from 'react-icons/io';
 import '../Login/Login.css';
 // import what from '../../assets/images/HomePage/whaeee.svg';
+import { useNavigate } from 'react-router-dom';
 
 const toaaobject = {
-     position: "top-center",
+    position: "top-center",
    autoClose: 4000,
    hideProgressBar: false,
    closeOnClick: true,
@@ -19,23 +20,54 @@ const toaaobject = {
    progress: undefined,
    theme: "colored",
 }
-
+export const LogginContext = createContext();
 function Login() {
-
+    const navigate = useNavigate();
     const [emaillog, setEmaillog] = useState("");
     const [passwordlog, setPasswordlog] = useState("");
+    const [loggedin, setLoggedin] = useState(false);
+    
+    useEffect(()=>{
+        // localStorage.removeItem('myData')
+        if(localStorage.getItem('myData')){
+            let customer_data = JSON.parse(localStorage.getItem('myData'));
+            if(customer_data.email && customer_data.customer_id){
+                navigate('dashboard'); 
+                // setLoggedin(true);
+                localStorage.setItem('isLoggin',true);
+            }
+        }
+    })
+
+      
     const loginpl = function(e){
      e.preventDefault()
-        if (!emaillog|| !passwordlog) {
-          //   alert("Complete all the fields!!!")
-            toast.error("Please complete all the fields!",toaaobject);
-            return
+     if(emaillog?.length>0){
+        if(passwordlog?.length>0){
+            if(passwordlog?.length>8){
+                toast.info("Thnak You for login you can access dashboard",toaaobject);
+                let data = {
+                    email:emaillog,
+                    customer_id:passwordlog
+                }
+                localStorage.setItem('myData', JSON.stringify(data));
+                navigate('/dashboard');
+                localStorage.setItem('isLoggin',true);
+            }else{
+                toast.error("Password length must be 8 characters",toaaobject);  
+            }
+        }else{
+            toast.error("Password is required",toaaobject);   
         }
-
+     }else{
+        toast.error("Email is required",toaaobject);
+     }
     }
 
+
     return (
-        <form>
+        <LogginContext.Provider value={{ loggedin, setLoggedin }}>
+          <form>
             <div className='main-Dive'>
                 <div className='sub-main-div'>
                     <div>
@@ -72,6 +104,8 @@ function Login() {
                 </div>
             </div>
         </form>
+        </LogginContext.Provider>
+        
     )
 }
 

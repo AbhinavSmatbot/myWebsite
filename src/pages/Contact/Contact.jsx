@@ -49,7 +49,7 @@ const Contact = () => {
                     </div>
                     <div className='mainDivContactRight'>
                          <form className='full-widthwww' style={{ width: "70%" }}>
-                              <h2 className='fs-4' style={{fontWeight:"600"}}>Contact me for Work/General Enquiry</h2>
+                              <h2 className='fs-4' style={{fontWeight:"600"}}>General Enquiry</h2>
                               <div className="mb-3">
                                    {/* <label htmlFor="exampleInputname" className="form-label">Name</label> */}
                                    <input type="text" ref={nameInput} placeholder='Enter your Name' className="form-control allInput" id="exampleInputname" aria-describedby="nameHelp" />

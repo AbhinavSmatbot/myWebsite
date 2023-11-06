@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 
 import Box from '@mui/material/Box';
@@ -31,8 +31,8 @@ const pages = [
   },
   {
     id:3,
-    page:'About Us',
-    url:"about"
+    page:'Exprience',
+    url:"exprience"
   },
   {
     id:4,
@@ -46,9 +46,10 @@ const pages = [
     url:"login"
   }
 ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Education'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Education','Logout'];
 
 function Header() {
+  
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -66,6 +67,12 @@ function Header() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const navigate = useNavigate();
+  const logout = () =>{
+    if(localStorage.getItem('isLoggin')){
+      navigate('logout');
+    }
+  }
 
   return (
     <AppBar position="fixed">
@@ -191,7 +198,8 @@ function Header() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  {setting !== 'Logout' ? <Typography textAlign="center">{setting}</Typography> :<Typography onClick={logout} textAlign="center">{setting}</Typography> }
+                  
                 </MenuItem>
               ))}
             </Menu>

@@ -6,6 +6,7 @@ import lock from '../../assets/images/Login/lock.png';
 import profile from "../../assets/images/Login/icon.jpg";
 import { IoMdSend } from 'react-icons/io';
 import '../Login/Login.css';
+import { useNavigate } from 'react-router-dom';
 
 const toaaobject = {
      position: "top-center",
@@ -18,7 +19,7 @@ const toaaobject = {
    theme: "colored",
 }
 function Registration() {
-    
+    const navigate = useNavigate();
     const LOCAL_STORAGE_KEY = "Info";
 
     const [Info, setInfo] = useState({
@@ -39,12 +40,28 @@ function Registration() {
 
     let register = (e) =>{
         e.preventDefault()
+        if(Info.name?.length>0){
+            if(Info.email?.length>0){
+                if(Info.password?.length>0){
+                    if(Info.profession?.length>0){
+                        navigate('/login');
+                        toast.success("Thankyou for register please login your account",toaaobject); 
+                    }else{
+                        toast.error("Please select your profession ",toaaobject);   
+                    }
 
-        if (!Info.name || !Info.email || !Info.password || !Info.profession) {
-          //   alert("Complete all the fields!!!")
-            toast.error("Please complete all the fields!",toaaobject);
-            return
+                }else{
+                    toast.error("Passoword is required",toaaobject);   
+                }
+
+            }else{
+                toast.error("Email is required",toaaobject);  
+            }
+        }else{
+            toast.error("Name is required",toaaobject); 
         }
+
+        
     }
 
     return (
