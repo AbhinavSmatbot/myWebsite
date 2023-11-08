@@ -15,6 +15,9 @@ import Registration from './pages/Registration/Registration';
 import About from './pages/About/About';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Logout from './pages/Logout/Logout';
+import Profile from './pages/Profile/Profile';
+import Education from './pages/Education/Education';
+import Gallary from './pages/Gallary/Gallary';
 
 const App = () => {
   return (
@@ -33,6 +36,9 @@ const App = () => {
           <Route path="registration" element={<Registration/>}/>
           <Route path="exprience" element={<About/>}/>
           <Route path="dashboard" element={<Dashboard/>}/>
+          <Route path='profile' element={<Profile/>}/>
+          <Route path='education' element={<Education/>}/>
+          <Route path="images" element={<Gallary/>}/>
           <Route path='logout' element={<Logout/>} />
          
         </Route>

@@ -1,5 +1,5 @@
 
-import './About.css';
+import '../About/About.css';
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
@@ -44,7 +44,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function About() {
+export default function Education() {
   const [expanded, setExpanded] = React.useState('');
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -55,65 +55,85 @@ export default function About() {
      <>
      <div className='aboutMainDiv mono'>
           <div>
-               <p style={{fontWeight:'600',fontSize:"20px"}}>Exprience</p>
+               <p style={{fontWeight:'600',fontSize:"20px"}}>Education</p>
           </div>
       <Accordion className="accordion-allstyler mono" expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography className='mono'>Developer</Typography>
+          <Typography className='mono'>Degree</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className='mono'>
-            <h5>Professional Experience – 2+ Years</h5>
+            <h5>MCA</h5>
             <ul>
-               <li>Having 2 year experience in the area of Frontend Developer.</li>
-               <li>Hands on experience in advanced technologies like, React.js, Angular, AngularJs, 
-      Angular Material, JavaScript, HTML, CSS, and SASS.
-               </li>
-               <li>Having experience on application maintenance, bug fixes, and speed improvement.</li>
+               <li>Master of Computer Applications(MCA)</li>
+               <li>Form Awadhesh Pratap Singh University Rewa (M.P.) </li>
+               <li>University Teaching Department</li>
+               {/* <li>2017 - 2020</li> */}
             </ul>
-            <h5>SmatBot, Hyderabad – FrontEnd Developer  (2+ Years)</h5>
-            <p>September 2021 to Present</p>
+            <h5>BCA</h5>
+            <ul>
+               <li>Bachelor of Computer Applications(BCA)</li>
+               <li>Form Awadhesh Pratap Singh University Rewa (M.P.) </li>
+               <li>University Teaching Department</li>
+               {/* <li>2014 - 2017</li> */}
+            </ul>
+            <h5>DCA</h5>
+            <ul>
+               <li>Diploma in Computer Applications(DCA)</li>
+               <li>Makhanlal Chaturvedi National University of Journalism and Communication (MCCU Bhopal)</li>
+               <li>National Collage Rewa (M.P.)</li>
+               {/* <li>2014 - 2015</li> */}
+            </ul>
+            <h5>BSW</h5>
+            <ul>
+               <li>Bachelor of Social Work(BSW)</li>
+               <li>Mahatma Gandhi Chitrakoot Gramodaya Vishwavidyalaya(MGCGV)</li>
+               <li>Distence Education</li>
+               {/* <li>2017 - 2019</li> */}
+            </ul>
+            
+            
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion className="accordion-allstyler" expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography className='mono'>NGO Social Worker</Typography>
+          <Typography className='mono'>Educational Certificates</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className='mono'>
-               <h5>Atal Gram Vikash Samiti - 2019 to 2020</h5>
-               <h6>Roles & Responsibility - </h6>
-            <dl>
-               <dt>Program Development and Implementation.</dt>
-               <dd>Plan, coordinate, and implement projects and initiatives in line with the organization's mission.</dd>
-               <dt>Advocacy and Awareness.</dt>
-               <dd>Raise awareness about important social or environmental issues.</dd>
-               <dt>Community Engagement.</dt>
-               <dd>Engage with community members to understand their needs and involve them in the organization's activities.</dd>
-            </dl>
+               {/* <h5>Educational Certificates</h5> */}
+               {/* <h6>Roles & Responsibility - </h6> */}
+            <ul>
+               <li>Tally - 3 months Certificates From Micro Technology Rewa (M.P.) </li>
+               <li>MS Office - 3 months Certificates From SIS Technology Rewa (M.P.)</li>
+               <li>JAVA - 6 months Ceritificate from NIT Hyderabad.</li>
+               <li>Full Stack Web Development - 6 months Ceritificate from NIT Hyderabad.</li>
+               <li>Angular - 3 months Ceritificate from NIT Hyderabad.</li>
+            </ul>
            
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion className="accordion-allstyler" expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography className='mono'>Teaching</Typography>
+          <Typography className='mono'>Social Certificates</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className='mono'>
-               <h5>PMKK Rewa(MP) - 2018 - 2019</h5>
-               <h6>Pradhan Mantri Kaushal Kendra</h6>
+               {/* <h5></h5> */}
+               {/* <h6>Pradhan Mantri Kaushal Kendra</h6> */}
             <ul>
-               <li>Pradhan Mantri Kaushal Kendra Rewa (MP)</li>
+               <li>Rural Development Progarm MP Certificates.</li>
+               <li>Nehru Yuva Kendra Sangathan (NYKS) under the Ministry of Youth Affairs and Sports, Government of India Certificates.</li>
             </ul>
-            <h6>Area Of Teaching</h6>
-            <dl>
-               <dt>Rural Development</dt>
+            {/* <h6>Area Of Teaching</h6> */}
+            {/* <dl>
+               <dt>Rural Development Progarm Certificates </dt>
                <dd>Rural and semi-urban locations. This helps in rural development and uplifts the economic prospects of individuals living in these areas.</dd>
                <dt>Skill Development</dt>
                <dd>skill development and vocational training to Indian youth. They offer a wide range of courses and programs that aim to impart job-specific skills and make individuals more employable.</dd>
-            </dl>
+            </dl> */}
           </Typography>
         </AccordionDetails>
       </Accordion>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link,useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 
 import Box from '@mui/material/Box';
@@ -46,7 +46,27 @@ const pages = [
     url:"login"
   }
 ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Education','Logout'];
+const settings = [
+  {
+    id:1,
+    page:'Profile',
+    url:"Profile",
+  },
+  {
+    id:2,
+    page:'Education',
+    url:'education',
+  },
+  {
+    id:3,
+    page:'Gallary',
+    url:'images',
+  },
+  {
+    id:4,
+    page:'Logout',
+    url:'Logout',
+  }];
 
 function Header() {
   
@@ -67,12 +87,12 @@ function Header() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  const navigate = useNavigate();
-  const logout = () =>{
-    if(localStorage.getItem('isLoggin')){
-      navigate('logout');
-    }
-  }
+  // const navigate = useNavigate();
+  // const logout = () =>{
+  //   if(localStorage.getItem('isLoggin')){
+  //     navigate('logout');
+  //   }
+  // }
 
   return (
     <AppBar position="fixed">
@@ -197,9 +217,8 @@ function Header() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  {setting !== 'Logout' ? <Typography textAlign="center">{setting}</Typography> :<Typography onClick={logout} textAlign="center">{setting}</Typography> }
-                  
+                <MenuItem key={setting.id} onClick={handleCloseUserMenu}>
+                 <Link to={setting.url} style={{textDecoration:"none"}}><Typography textAlign="center">{setting.page}</Typography></Link>
                 </MenuItem>
               ))}
             </Menu>

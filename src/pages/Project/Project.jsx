@@ -8,6 +8,10 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 // import Table from '../Project/Table';
 import { Link } from 'react-router-dom';
+import ProjectSmatbot from './ProjectSmatbotImage';
+import BankProject from './BankProject';
+import SportProject from './SportProject';
+import CilponisProject from './Ciliponis';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -87,6 +91,8 @@ export default function Project() {
 
             
           </Typography>
+
+          <ProjectSmatbot/>
         </AccordionDetails>
       </Accordion>
       <Accordion className="accordion-allstyler" expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
@@ -103,7 +109,7 @@ export default function Project() {
             <p>Role : Frontend Developer</p>
             <h6>Description - </h6>
             <p>Using the WhatsApp chatbot, we can instantly book cinema tickets, food, and beverages  across India.Those have made reservations or placed orders for food and drink via the WhatsApp chatbot are listed in a database, and information will be displayed on a website. Once the food has been delivered, the Cinepolis person may simply follow it and modify the status of which linked person's order has been delivered after delivering it to the seats.
-</p>
+            </p>
             <h5 style={{fontWeight:'600',fontSize:'16px'}}>Roles & Responsibility :</h5>
             <ul>
               <li>Developing frontend website architecture.</li>
@@ -116,29 +122,71 @@ export default function Project() {
 
             
           </Typography>
+          <CilponisProject/>
         </AccordionDetails>
       </Accordion>
-      {/* <Accordion className="accordion-allstyler" expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+      <Accordion className="accordion-allstyler" expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography className='mono'>Teaching</Typography>
+          <Typography className='mono'>Online Banking Services</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-               <h5>PMKK Rewa(MP) - 2018 - 2019</h5>
-               <h6>Pradhan Mantri Kaushal Kendra</h6>
+               <h5>MCA Collage Project</h5>
+               {/* <h6>Jan 2020 to jun 2020</h6> */}
             <ul>
-               <li>Pradhan Mantri Kaushal Kendra Rewa (MP)</li>
+               <li>Design and Implementation of Online Banking Services</li>
             </ul>
-            <h6>Area Of Teaching</h6>
-            <dl>
-               <dt>Rural Development</dt>
-               <dd>Rural and semi-urban locations. This helps in rural development and uplifts the economic prospects of individuals living in these areas.</dd>
-               <dt>Skill Development</dt>
-               <dd>skill development and vocational training to Indian youth. They offer a wide range of courses and programs that aim to impart job-specific skills and make individuals more employable.</dd>
-            </dl>
+            <p>Project Name  :  Online Banking Services</p>
+            <p>Duration :  Jan 2020 to jun 2020</p>
+            {/* <p>Site Link :  <Link to="https://www.kds.cinepolis.in">https://www.kds.cinepolis.in</Link></p> */}
+            <p>Tech Stack : JavaScript + Java + Oracle 10g + Tomcat 5.x</p>
+            <p>Role : Frontend Developer</p>
+            <h6>Description - </h6>
+            <p>Using the WhatsApp chatbot, we can instantly book cinema tickets, food, and beverages  across India.Those have made reservations or placed orders for food and drink via the WhatsApp chatbot are listed in a database, and information will be displayed on a website. Once the food has been delivered, the Cinepolis person may simply follow it and modify the status of which linked person's order has been delivered after delivering it to the seats.
+            </p>
+            <h5 style={{fontWeight:'600',fontSize:'16px'}}>Roles & Responsibility :</h5>
+            <ul>
+              <li>Existing system is a manual system it will not provide the online system.</li>
+              <li>Existing system does not provide the separate login for the user (customer).</li>
+              <li>Existing system does not provide the online transaction facility.</li>
+              <li>This system does not give the update account information for the customer.</li>
+              <li>	User can transfer funds from his account to any other account with this bank.</li>
+            </ul>
           </Typography>
+          <BankProject/>
         </AccordionDetails>
-      </Accordion> */}
+      </Accordion>
+      <Accordion className="accordion-allstyler" expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+          <Typography className='mono'>Rewa Sport Management</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+               <h5>Rewa Sport Management Collage Project</h5>
+               {/* <h6>Jan 2020 to jun 2020</h6> */}
+            <ul>
+               <li>APS University Rewa (M.P.) Sport Department</li>
+            </ul>
+            <p>Project Name  :  Sport Management</p>
+            <p>Duration :  july 2019 to Dec 2019</p>
+            {/* <p>Site Link :  <Link to="https://www.kds.cinepolis.in">https://www.kds.cinepolis.in</Link></p> */}
+            <p>Tech Stack : JavaScript + PHP + PHP My Admin + Tomcat 5.x</p>
+            <p>Role : Frontend Developer</p>
+            <h6>Description - </h6>
+            <p>Using this website website,we can find a wide range of information related to sports.  
+            </p>
+            <h5 style={{fontWeight:'600',fontSize:'16px'}}>Roles & Responsibility :</h5>
+            <ul>
+              <li> websites provide the latest news and updates about various sports, teams, and athletes.includuing game results, player transfers, injury updates, and more.</li>
+              <li>Scores and Live Updates: Many sports websites offer live scores and updates for ongoing games and events. You can check the scores.</li>
+              <li>You can find schedules for upcoming games and events for various sports. This information helps fans plan to watch their favorite teams in action.</li>
+              <li>Feature articles, analysis, and opinion pieces written by experts and journalists. These pieces can provide in-depth insights into games, players, and team performances.</li>
+              <li>You can learn more about your favorite players and teams, including their statistics, biographies, and recent performances.</li>
+            </ul>
+          </Typography>
+          <SportProject/>
+        </AccordionDetails>
+      </Accordion>
     </div>
     </>
   );
