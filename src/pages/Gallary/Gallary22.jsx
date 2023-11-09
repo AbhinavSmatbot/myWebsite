@@ -1,6 +1,6 @@
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
+
+import SimpleImageSlider from "react-simple-image-slider";
 
 
 import w1 from '../../assets/images/other_s/000.jpeg';
@@ -11,56 +11,34 @@ import w5 from '../../assets/images/other_s/2222.jpeg';
 import w6 from '../../assets/images/other_s/22222.jpeg';
 import w7 from '../../assets/images/other_s/222222.jpeg';
 
-
+const images = [
+  { url: w2 },
+  { url: w1 },
+  { url: w3 },
+  { url: w4 },
+  { url: w5 },
+  { url: w6 },
+  { url: w7},
+];
 
 
 export default function Gallary22() {
   return (
-     <div className='aboutMainDiv mono' style={{marginTop:"20px !important"}}>
-          <ImageList sx={{ width:'100%', height: 450 }} cols={2} rowHeight={350}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            alt={item.title}
-            loading="lazy"
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+     <div className=' mono' style={{marginTop:"20px !important"}}>
+          
+    <SimpleImageSlider
+        width={400}
+        height={504}
+        images={images}
+        showBullets={true}
+        showNavs={true}
+        autoPlay={true}
+        slideDuration={0.3}
+      />
+
      </div>
     
   );
 }
 
-const itemData = [
-     {
-       img: w1,
-       title: 'Breakfast',
-     },
-     {
-       img: w2,
-       title: 'Burger',
-     },
-     {
-       img: w3,
-       title: 'Camera',
-     },
-     {
-       img: w4,
-       title: 'Coffee',
-     },
-     {
-       img: w5,
-       title: 'Hats',
-     },
-     {
-       img:w6,
-       title: 'Honey',
-     },
-     {
-       img: w7,
-       title: 'Basketball',
-     },
-   ];
+

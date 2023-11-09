@@ -101,8 +101,8 @@ export default function Project() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className='mono'>
-            <h5 style={{fontWeight:'600',fontSize:'16px'}}>Project Name -  SmatBot</h5>
-            <p>Project Name  :  Cinepolis</p>
+            <h5 style={{fontWeight:'600',fontSize:'16px'}}>Project Name -  Cinepolis</h5>
+            {/* <p>Project Name  :  Cinepolis</p> */}
             <p>Duration :  November 2021 to January 2022</p>
             <p>Site Link :  <Link to="https://www.kds.cinepolis.in">https://www.kds.cinepolis.in</Link></p>
             <p>Tech Stack : React + SQL + Node js + Php</p>

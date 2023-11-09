@@ -36,15 +36,15 @@ const pages = [
   },
   {
     id:4,
+    page:'Education',
+    url:'education',
+  },
+  {
+    id:5,
     page:'Contact Us',
     url:"contact-us"
   },
   
-  {
-    id:5,
-    page:'Login',
-    url:"login"
-  }
 ];
 const settings = [
   {
@@ -54,13 +54,13 @@ const settings = [
   },
   {
     id:2,
-    page:'Education',
-    url:'education',
+    page:'Gallary',
+    url:'images',
   },
   {
     id:3,
-    page:'Gallary',
-    url:'images',
+    page:'Login',
+    url:"login"
   },
   {
     id:4,

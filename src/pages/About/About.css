@@ -30,3 +30,48 @@
 .css-1js5ogp-MuiImageList-root {
      border-radius: 10px;
 }
+.gallaryImageFlex{
+     display: flex;
+     flex-direction:row;
+     justify-content: center;
+     align-items: center;
+     
+}
+.gallaryImageFlex11{
+     display: flex;
+     flex-direction:row;
+     justify-content: center;
+     align-items: center;
+}
+.gallaryImageFlex22{
+     display: none;
+}
+.asasas{
+     /* width: 47%; */
+     margin: 20px;
+     border: 10px solid #1552ad47;
+     border-radius: 10px;
+}
+@media (max-width: 768px) {
+     .gallaryImageFlex{
+          display: flex;
+          flex-direction:column;
+          justify-content: center;
+          align-items: center;
+     }
+     .asasas{
+          width:100%;
+     }
+     .gallaryImageFlex11{
+          display:none;
+          
+     }
+     .gallaryImageFlex22{
+          display: flex;
+          flex-direction:row;
+          justify-content: center;
+          align-items: center;
+     }
+     
+
+}

@@ -1,12 +1,16 @@
 
 import './About.css';
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import {BiDownload} from "react-icons/bi";
+import resume from '../../assets/pdf/Abhinav-9425939732n.pdf';
+import { IoMdSend } from 'react-icons/io';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -114,6 +118,20 @@ export default function About() {
                <dt>Skill Development</dt>
                <dd>skill development and vocational training to Indian youth. They offer a wide range of courses and programs that aim to impart job-specific skills and make individuals more employable.</dd>
             </dl>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion className="accordion-allstyler" expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+        <AccordionSummary aria-controls="panel3d-content" id="panel4d-header">
+          <Typography className='mono'>Download Info</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography className='mono'>
+          <div style={{margin:"20px",textAlign:"center"}}>
+            <a href={resume} download><button type="button" className="btn btn-primary mb-3">Download CV <BiDownload style={{fontSize:"22px"}}/></button></a>
+            
+            <Link to="mailto:abhinav.smatbot@gmail.com"><button type="button" style={{marginLeft:"10px"}} className="btn btn-primary mb-3 ml-3">Contact Me <IoMdSend style={{fontSize:"22px"}}/> </button></Link>
+          </div>
           </Typography>
         </AccordionDetails>
       </Accordion>
