@@ -90,7 +90,7 @@ function Login() {
                                 IN LINK WE HAVE TO PASS LOCATION OF THE NAVIGATING PAGE AS PATH IS DEFINED IN THE APP.JS*/}
                             <div className='login-btn'>
                                 {/* <Link to='/home'> */}
-                                <button type="button" onClick={loginpl} className="btn btn-primary mb-3 full-width">Contact Me <IoMdSend style={{fontSize:"20px"}}/></button>
+                                <button type="button" onClick={loginpl} className="btn btn-primary mb-3 full-width">Login <IoMdSend style={{fontSize:"20px"}}/></button>
                                     {/* <button type="button" className='button-main'>Login</button> */}
                                 {/* </Link> */}
                             </div>

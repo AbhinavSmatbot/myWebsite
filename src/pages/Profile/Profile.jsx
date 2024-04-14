@@ -43,17 +43,17 @@ const rows = [
   createData('Sex -', "Male"),
   createData('Marital status -', "Unmarried"),
   createData('Father Name -', "Krishnamani Prasad pandey"),
-  createData('Maother Name -', "Anuradha pandey"),
+  createData('Mother Name -', "Anuradha pandey"),
   createData('Father Occupation -', "Teacher"),
   createData('Sibling -', "One Big Brother and One Younger Sister"),
-  createData('Languages -', "hindi,English,Telgu"),
-  createData('City Liviing -', "Hyderabad"),
+  createData('Languages -', "Hindi,English,Telugu"),
+  createData('Current City -', "Hyderabad"),
 ];
 
 export default function Profile() {
   return (
-    <TableContainer component={Paper} style={{width:'400px',alignItems:"center",margin:'100px auto', }} className='mono'>
-      <Table sx={{ minWidth: 400,maxWidth:400 }} aria-label="customized table">
+    <TableContainer component={Paper} style={{width:'500px',alignItems:"center",margin:'100px auto', }} className='mono'>
+      <Table sx={{ minWidth: 500,maxWidth:500 }} aria-label="customized table">
         <TableHead>
           <TableRow className='mono'>
             <StyledTableCell className='mono'>Abhinav</StyledTableCell>

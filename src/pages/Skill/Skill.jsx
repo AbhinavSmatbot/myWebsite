@@ -40,7 +40,7 @@ const Skill = () => {
                                    <p className='mb-2 mt-2 text-black'>DataBase</p>
                                    <div className='cont-div-skill'>
                                         <button type="button" className="btn btn-outline-primary m-1">MYSQL</button>
-                                        <button type="button" className="btn btn-outline-secondary m-1">MANGO DB</button>
+                                        <button type="button" className="btn btn-outline-secondary m-1">MONGO DB</button>
                                    </div>
                               </div>
                               <div className='main-box-div'>

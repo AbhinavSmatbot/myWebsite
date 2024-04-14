@@ -81,7 +81,7 @@ function Registration() {
                             </div>
                             <div className='mail-id'>
                                 <img src={lock} alt="emial" className='email' />
-                                <input type="password" placeholder='Enter New Password' className='fill-Div' value={Info.password} onChange={(e) => setInfo({...Info, password: e.target.value})}/>
+                                <input type="password" placeholder='Enter Password' className='fill-Div' value={Info.password} onChange={(e) => setInfo({...Info, password: e.target.value})}/>
                             </div>
                             <div className='select'>
                                 {/* <label className='plist'>Intrest</label> */}

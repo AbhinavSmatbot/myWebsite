@@ -31,8 +31,8 @@ const pages = [
   },
   {
     id:3,
-    page:'Exprience',
-    url:"exprience"
+    page:'Experience',
+    url:"experience"
   },
   {
     id:4,
@@ -54,7 +54,7 @@ const settings = [
   },
   {
     id:2,
-    page:'Gallary',
+    page:'Gallery',
     url:'images',
   },
   {

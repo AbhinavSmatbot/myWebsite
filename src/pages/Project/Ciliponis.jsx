@@ -15,8 +15,8 @@ export default function CilponisProject() {
   return (
     <Box sx={{ width: '100%', height:'auto' }}>
       <ImageList variant="masonry" cols={3} gap={8}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
+        {itemData.map((item,index) => (
+          <ImageListItem key={index}>
             <img
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               src={`${item.img}?w=248&fit=crop&auto=format`}

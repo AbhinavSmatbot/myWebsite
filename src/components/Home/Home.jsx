@@ -15,7 +15,9 @@ import Skill from '../../pages/Skill/Skill';
 import Contact from '../../pages/Contact/Contact';
 import Project from '../../pages/Project/Project';
 import Exprience from '../../pages/About/About';
-import Education from '../../pages/Education/Education'
+import Education from '../../pages/Education/Education';
+import resume from '../../assets/pdf/Abhinav-9425939732n.pdf';
+import {BiDownload} from "react-icons/bi";
 
 
 function Home() {
@@ -30,7 +32,7 @@ function Home() {
                  <p style={{fontWeight:'600'}}>Expriences in Web development knowledge,producing quality work.</p>
                </div>
                <div className='all-center'>
-               {/* <button type="button" className="btn btn-primary">Download CV</button> */}
+               <a href={resume} download><button type="button" style={{marginRight:"3px"}} className="btn btn-primary mb-3">Download CV <BiDownload style={{fontSize:"22px"}}/></button></a>
                <Link to="mailto:abhinav.smatbot@gmail.com"><button type="button" className="btn btn-primary mb-3">Contact Me <IoMdSend style={{fontSize:"22px"}}/></button></Link>
                </div>
                <div className='socialMedis'>

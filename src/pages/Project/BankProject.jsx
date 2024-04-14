@@ -18,8 +18,8 @@ export default function BankProject() {
   return (
     <Box sx={{ width: '100%', height:'auto' }}>
       <ImageList variant="masonry" cols={3} gap={8}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.pic}>
+        {itemData.map((item,index) => (
+          <ImageListItem key={index}>
             <img
               srcSet={`${item.pic}?w=248&fit=crop&auto=format&dpr=2 2x`}
               src={`${item.pic}?w=248&fit=crop&auto=format`}

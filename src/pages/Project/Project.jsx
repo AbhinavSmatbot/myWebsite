@@ -69,7 +69,7 @@ export default function Project() {
         <AccordionDetails>
           <Typography className='mono'>
             <h5 style={{fontWeight:'600',fontSize:'16px'}}>Project Name -  SmatBot</h5>
-            <p>Project Name  :  SmatBot</p>
+            {/* <p>Project Name  :  SmatBot</p> */}
             <p>Duration :  September 2021 to Still</p>
             <p>Site Link :  <Link to="www.smatbot.com">www.smatbot.com</Link></p>
             <p>Tech Stack : Angular + SQL + Node js + Php</p>
